@@ -10,6 +10,7 @@ import java.util.Map;
 @Builder
 @Accessors(chain=true)
 public class CreateOrder {
-    private final int customerId;
-    private final Map<Integer, Integer> quantityByProduct;//["아이스 아에리카노", 3]
+    private int customerId;
+    private int storeId;
+    private Map<Integer, Integer> quantityByProduct;//["아이스 아에리카노", 3]
 }

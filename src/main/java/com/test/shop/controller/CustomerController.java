@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.*;
 public class CustomerController {
     private final CustomerService customerService;
 
-    @GetMapping("")
+    @GetMapping("/")
     public String getRequest(){
         return "Hi getMethod";
     }

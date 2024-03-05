@@ -8,9 +8,9 @@ import lombok.experimental.Accessors;
 @Builder
 @Accessors(chain=true)
 public class CreateCustomer {
-    private final String name;
+    private String name;
 
-    private final String address;
+    private String address;
 
-    private final String phneNumber;
+    private String phneNumber;
 }
