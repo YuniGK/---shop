@@ -14,15 +14,12 @@ public class OrderController {
     private final OrderService orderService;
 
     @PostMapping("/new")
-    public Response<Void> createNewOrder(@RequestParam int customerId){
-        //TODO
-        HashMap<Integer, Integer> orderMap = new HashMap<>();
-        orderMap.put(1, 10);
-
+    public Response<Void> createNewOrder(@RequestBody NewOrderRequest request){
         orderService.newOrder(
                 CreateOrder.builder()
-                        .customerId(customerId)
-                        .quantityByProduct(orderMap)
+                        .customerId(request.getCustomerId())
+                        .storeId(request.getStoreId())
+                        .quantityByProduct(request.getProducts())
                         .build()
         );
 
