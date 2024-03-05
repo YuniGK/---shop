@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">0.003s</div>
+<div class="counter">0.004s</div>
 <p>duration</p>
 </div>
 </td>
@@ -79,7 +79,7 @@
 <a name="contextLoads()"></a>
 <h3 class="failures">contextLoads()</h3>
 <span class="code">
-<pre>java.lang.IllegalStateException: Failed to load ApplicationContext for [WebMergedContextConfiguration@41d16cc3 testClass = com.test.shop.ShopApplicationTests, locations = [], classes = [com.test.shop.ShopApplication], contextInitializerClasses = [], activeProfiles = [], propertySourceDescriptors = [], propertySourceProperties = [&quot;org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true&quot;], contextCustomizers = [org.springframework.boot.test.autoconfigure.actuate.observability.ObservabilityContextCustomizerFactory$DisableObservabilityContextCustomizer@1f, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizer@1608bcbd, org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@4426bff1, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@336f1079, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@3c9c0d96, org.springframework.boot.test.context.SpringBootTestAnnotation@fc90cb65], resourceBasePath = &quot;src/main/webapp&quot;, contextLoader = org.springframework.boot.test.context.SpringBootContextLoader, parent = null]
+<pre>java.lang.IllegalStateException: Failed to load ApplicationContext for [WebMergedContextConfiguration@e09f1b6 testClass = com.test.shop.ShopApplicationTests, locations = [], classes = [com.test.shop.ShopApplication], contextInitializerClasses = [], activeProfiles = [], propertySourceDescriptors = [], propertySourceProperties = [&quot;org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true&quot;], contextCustomizers = [org.springframework.boot.test.autoconfigure.actuate.observability.ObservabilityContextCustomizerFactory$DisableObservabilityContextCustomizer@1f, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizer@72437d8d, org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@29a0cdb, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@3a4621bd, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@48e92c5c, org.springframework.boot.test.context.SpringBootTestAnnotation@34e93abc], resourceBasePath = &quot;src/main/webapp&quot;, contextLoader = org.springframework.boot.test.context.SpringBootContextLoader, parent = null]
 	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:180)
 	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:130)
 	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:191)
@@ -351,7 +351,7 @@ Caused by: org.springframework.boot.autoconfigure.jdbc.DataSourceProperties$Data
 </thead>
 <tr>
 <td class="failures">contextLoads()</td>
-<td class="failures">0.003s</td>
+<td class="failures">0.004s</td>
 <td class="failures">failed</td>
 </tr>
 </table>
@@ -359,8 +359,8 @@ Caused by: org.springframework.boot.autoconfigure.jdbc.DataSourceProperties$Data
 <div id="tab2" class="tab">
 <h2>Standard output</h2>
 <span class="code">
-<pre>20:39:23.499 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.test.shop.ShopApplicationTests]: ShopApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-20:39:23.541 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.test.shop.ShopApplication for test class com.test.shop.ShopApplicationTests
+<pre>21:23:17.458 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.test.shop.ShopApplicationTests]: ShopApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+21:23:17.500 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.test.shop.ShopApplication for test class com.test.shop.ShopApplicationTests
 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -370,15 +370,15 @@ Caused by: org.springframework.boot.autoconfigure.jdbc.DataSourceProperties$Data
  =========|_|==============|___/=/_/_/_/
  :: Spring Boot ::                (v3.2.3)
 
-2024-03-04T20:39:23.704+09:00  INFO 9763 --- [    Test worker] com.test.shop.ShopApplicationTests       : Starting ShopApplicationTests using Java 21.0.2 with PID 9763 (started by yunkim in /Users/yunkim/Downloads/shop/---shop)
-2024-03-04T20:39:23.705+09:00  INFO 9763 --- [    Test worker] com.test.shop.ShopApplicationTests       : No active profile set, falling back to 1 default profile: &quot;default&quot;
-2024-03-04T20:39:23.965+09:00  INFO 9763 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
-2024-03-04T20:39:23.986+09:00  INFO 9763 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 18 ms. Found 2 JDBC repository interfaces.
-2024-03-04T20:39:24.120+09:00  WARN 9763 --- [    Test worker] o.s.w.c.s.GenericWebApplicationContext   : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'customerController' defined in file [/Users/yunkim/Downloads/shop/---shop/build/classes/java/main/com/test/shop/controller/CustomerController.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'customerService' defined in file [/Users/yunkim/Downloads/shop/---shop/build/classes/java/main/com/test/shop/service/CustomerService.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'customerRepository' defined in com.test.shop.reopsitory.CustomerRepository defined in @EnableJdbcRepositories declared on JdbcRepositoriesRegistrar.EnableJdbcRepositoriesConfiguration: Cannot resolve reference to bean 'org.springframework.data.jdbc.core.mapping.JdbcMappingContext' while setting bean property 'mappingContext'
-2024-03-04T20:39:24.124+09:00  INFO 9763 --- [    Test worker] .s.b.a.l.ConditionEvaluationReportLogger : 
+2024-03-04T21:23:17.666+09:00  INFO 10858 --- [    Test worker] com.test.shop.ShopApplicationTests       : Starting ShopApplicationTests using Java 21.0.2 with PID 10858 (started by yunkim in /Users/yunkim/Downloads/shop/---shop)
+2024-03-04T21:23:17.667+09:00  INFO 10858 --- [    Test worker] com.test.shop.ShopApplicationTests       : No active profile set, falling back to 1 default profile: &quot;default&quot;
+2024-03-04T21:23:17.936+09:00  INFO 10858 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2024-03-04T21:23:17.957+09:00  INFO 10858 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 19 ms. Found 2 JDBC repository interfaces.
+2024-03-04T21:23:18.109+09:00  WARN 10858 --- [    Test worker] o.s.w.c.s.GenericWebApplicationContext   : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'customerController' defined in file [/Users/yunkim/Downloads/shop/---shop/build/classes/java/main/com/test/shop/controller/CustomerController.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'customerService' defined in file [/Users/yunkim/Downloads/shop/---shop/build/classes/java/main/com/test/shop/service/CustomerService.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'customerRepository' defined in com.test.shop.reopsitory.CustomerRepository defined in @EnableJdbcRepositories declared on JdbcRepositoriesRegistrar.EnableJdbcRepositoriesConfiguration: Cannot resolve reference to bean 'org.springframework.data.jdbc.core.mapping.JdbcMappingContext' while setting bean property 'mappingContext'
+2024-03-04T21:23:18.115+09:00  INFO 10858 --- [    Test worker] .s.b.a.l.ConditionEvaluationReportLogger : 
 
 Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
-2024-03-04T20:39:24.131+09:00 ERROR 9763 --- [    Test worker] o.s.b.d.LoggingFailureAnalysisReporter   : 
+2024-03-04T21:23:18.126+09:00 ERROR 10858 --- [    Test worker] o.s.b.d.LoggingFailureAnalysisReporter   : 
 
 ***************************
 APPLICATION FAILED TO START
@@ -397,9 +397,9 @@ Consider the following:
 	If you want an embedded database (H2, HSQL or Derby), please put it on the classpath.
 	If you have database settings to be loaded from a particular profile you may need to activate it (no profiles are currently active).
 
-2024-03-04T20:39:24.134+09:00  WARN 9763 --- [    Test worker] o.s.test.context.TestContextManager      : Caught exception while allowing TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener] to prepare test instance [com.test.shop.ShopApplicationTests@662e682a]
+2024-03-04T21:23:18.130+09:00  WARN 10858 --- [    Test worker] o.s.test.context.TestContextManager      : Caught exception while allowing TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener] to prepare test instance [com.test.shop.ShopApplicationTests@557b6a37]
 
-java.lang.IllegalStateException: Failed to load ApplicationContext for [WebMergedContextConfiguration@41d16cc3 testClass = com.test.shop.ShopApplicationTests, locations = [], classes = [com.test.shop.ShopApplication], contextInitializerClasses = [], activeProfiles = [], propertySourceDescriptors = [], propertySourceProperties = [&quot;org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true&quot;], contextCustomizers = [org.springframework.boot.test.autoconfigure.actuate.observability.ObservabilityContextCustomizerFactory$DisableObservabilityContextCustomizer@1f, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizer@1608bcbd, org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@4426bff1, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@336f1079, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@3c9c0d96, org.springframework.boot.test.context.SpringBootTestAnnotation@fc90cb65], resourceBasePath = &quot;src/main/webapp&quot;, contextLoader = org.springframework.boot.test.context.SpringBootContextLoader, parent = null]
+java.lang.IllegalStateException: Failed to load ApplicationContext for [WebMergedContextConfiguration@e09f1b6 testClass = com.test.shop.ShopApplicationTests, locations = [], classes = [com.test.shop.ShopApplication], contextInitializerClasses = [], activeProfiles = [], propertySourceDescriptors = [], propertySourceProperties = [&quot;org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true&quot;], contextCustomizers = [org.springframework.boot.test.autoconfigure.actuate.observability.ObservabilityContextCustomizerFactory$DisableObservabilityContextCustomizer@1f, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizer@72437d8d, org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@29a0cdb, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@3a4621bd, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@48e92c5c, org.springframework.boot.test.context.SpringBootTestAnnotation@34e93abc], resourceBasePath = &quot;src/main/webapp&quot;, contextLoader = org.springframework.boot.test.context.SpringBootContextLoader, parent = null]
 	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:180) ~[spring-test-6.1.4.jar:6.1.4]
 	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:130) ~[spring-test-6.1.4.jar:6.1.4]
 	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:191) ~[spring-test-6.1.4.jar:6.1.4]
@@ -706,7 +706,7 @@ Unconditional classes:
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 8.5</a> at 2024. 3. 4. 오후 8:39:24</p>
+<a href="http://www.gradle.org">Gradle 8.5</a> at 2024. 3. 4. 오후 9:23:18</p>
 </div>
 </div>
 </body>
