@@ -17,7 +17,7 @@ public class CustomerService {
     private final CustomerRepository customerRepository;
 
     public CustomerDto newCustomer(CreateCustomer customer){
-        //dto -> entity
+        //dto <- entity
         Customer entity = Customer.newCustomer(customer);
         Customer saved = customerRepository.save(entity);
 

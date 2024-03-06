@@ -44,7 +44,6 @@ public class OrderService {
             storeProducts.add(storeProduct);
         }
 
-        //dto -> entity
         Order entity = Order.newOrder(order);
         Order saved = orderRepository.save(entity);
 
